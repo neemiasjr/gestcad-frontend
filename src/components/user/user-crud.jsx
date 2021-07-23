@@ -9,7 +9,7 @@ const headerProps = {
     subtitle: 'Cadastro de usuário'
 }
 
-const baseUrl = 'https://desafio2-neemiasjr-gamaacademy-backend.netlify.app/user'
+const baseUrl = 'https://my-json-server.typicode.com/neemiasjr/gestcad-jsonserver/user'
 const initState= {
     user: { name:'', email:'', },
     list: []
