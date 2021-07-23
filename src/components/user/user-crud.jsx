@@ -11,7 +11,7 @@ const headerProps = {
 
 const baseUrl = 'http://localhost:8000/user'
 const initState= {
-    user: { name:'', email:''},
+    user: { name:'', email:'', },
     list: []
 }
 
