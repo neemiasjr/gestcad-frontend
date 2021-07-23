@@ -9,7 +9,7 @@ const headerProps = {
     subtitle: 'Cadastro de usuário'
 }
 
-const baseUrl = 'http://localhost:8000/user'
+const baseUrl = 'https://desafio2-neemiasjr-gamaacademy-backend.netlify.app/user'
 const initState= {
     user: { name:'', email:'', },
     list: []
