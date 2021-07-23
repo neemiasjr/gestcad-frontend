@@ -9,7 +9,7 @@ const headerProps = {
     subtitle: 'Cadastro de produtos'
 }
 
-const baseUrl = 'http://localhost:8000/produtos'
+const baseUrl = 'https://my-json-server.typicode.com/neemiasjr/gestcad-jsonserver/produtos'
 const initState= {
     user: { name:'', email:''},
     list: []
