@@ -5,17 +5,17 @@ import axios from 'axios'
 
 const headerProps = {
     icon: 'users',
-    title: 'usuários',
-    subtitle: 'Cadastro de usuário'
+    title: 'produtos',
+    subtitle: 'Cadastro de produtos'
 }
 
-const baseUrl = 'http://localhost:8000/user'
+const baseUrl = 'http://localhost:8000/produtos'
 const initState= {
     user: { name:'', email:''},
     list: []
 }
 
-export default class UserCrud extends React.Component{
+export default class ProdutosCrud extends React.Component{
 
     state = { ...initState }
 
