@@ -3,10 +3,10 @@ import './home.css'
 import Main from '../template/main'
 
 export default props =>
-    <Main icon="home" title="Início" subtitle="GESCAD">
+    <Main icon="home" title="Início" subtitle="MadeInBrazil">
 
-    <div className="display-4">Bem vindo</div>
+    <div className="display-4">Loja de Instrumentos Musicais</div>
     <hr />
-    <p className="mb-0">Sistema de Gestão de Cadastro - Produtos e Clientes (GESCAD)</p>
+    <p className="mb-0">Made in Brazil</p>
 
     </Main>

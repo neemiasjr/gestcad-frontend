@@ -11,7 +11,7 @@ const headerProps = {
 
 const baseUrl = 'https://my-json-server.typicode.com/neemiasjr/gestcad-jsonserver/produtos'
 const initState= {
-    user: { name:'', email:''},
+    product: { img_produto:'', desc_produto:'', price: ''},
     list: []
 }
 
@@ -32,19 +32,19 @@ export default class ProdutosCrud extends React.Component{
 
     /*Limpar formulario */
     clear() {
-        this.setState({ user: initState.user })
+        this.setState({ user: initState.product })
     }
     save() {
-        const user = this.state.user        
-        const method = user.id ? 'put' : 'post'
-        const url = user.id ? `${baseUrl}/${user.id}` : baseUrl
+        const product = this.state.product        
+        const method = product.id ? 'put' : 'post'
+        const url = product.id ? `${baseUrl}/${product.id}` : baseUrl
         var config = {
             headers: {crossdomain: true}
         };
-        axios[method](url,user,config)
+        axios[method](url,product,config)
         .then(resp => {
             const list = this.getUpdatedList(resp.data)
-            this.setState({ user: initState.user, list })  
+            this.setState({ product: initState.product, list })  
             console.log(resp.data)         
         })
         .catch(error => {
@@ -52,16 +52,16 @@ export default class ProdutosCrud extends React.Component{
         })
 
     }
-    getUpdatedList(user){       
-        const list = this.state.list.filter(u => u.id !== user.id) /**removendo o usuario da lista */
-        list.unshift(user) /**inserindo na primeira posição do array */
+    getUpdatedList(product){       
+        const list = this.state.list.filter(u => u.id !== product.id) /**removendo o usuario da lista */
+        list.unshift(product) /**inserindo na primeira posição do array */
         return list
     }
 
     updatefield(event) {
-        const user = { ...this.state.user }
-        user[event.target.name] = event.target.value /**em target pegamos o conteúdo de input name */
-        this.setState({ user })
+        const product = { ...this.state.product }
+        product[event.target.name] = event.target.value /**em target pegamos o conteúdo de input name */
+        this.setState({ product })
     }
     renderForm(){
         /**jsx que ira renderizar o formulário */
@@ -70,21 +70,31 @@ export default class ProdutosCrud extends React.Component{
                 <div className="row">
                     <div className="col-12 col-md-6">
                         <div className="form-group">
-                            <label htmlFor="name">Nome</label>
+                            <label htmlFor="name">Descrição Produto</label>
                             <input type="text" className="form-control" 
-                                name="name" 
-                                value={this.state.user.name}
+                                name="desc_produto" 
+                                value={this.state.product.desc_produto}
                                 onChange={e => this.updatefield(e)}
-                                placeholder="Digite o nome.."
+                                placeholder="Digite a descricao do produto.."
                                 />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="name">E-mail</label>
-                            <input type="email" className="form-control" 
-                                name="email" 
-                                value={this.state.user.email}
+                            <label htmlFor="name">URL Imagem Produto</label>
+                            <input type="text" className="form-control" 
+                                name="img_produto" 
+                                value={this.state.product.img_produto}
                                 onChange={e => this.updatefield(e)}
-                                placeholder="Digite o email.."
+                                placeholder="Digite a URL do produto.."
+                                />
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="name">Preço</label>
+                            <input type="text" className="form-control" 
+                                name="price" 
+                                value={this.state.product.price}
+                                onChange={e => this.updatefield(e)}
+                                placeholder="Digite o valor do produto.."
                                 />
                         </div>
                     </div>
@@ -107,13 +117,13 @@ export default class ProdutosCrud extends React.Component{
 
 
     /**edição */
-    load(user){
-        this.setState({ user })/**atualiza o estado da aplicação. */
+    load(product){
+        this.setState({ product })/**atualiza o estado da aplicação. */
     }
-    remove(user){
-        axios.delete(`${baseUrl}/${user.id}`)
+    remove(product){
+        axios.delete(`${baseUrl}/${product.id}`)
         .then(resp => {
-            const list = this.state.list.filter(u => u !== user)
+            const list = this.state.list.filter(u => u !== product)
             this.setState({ list })
         })
     }
@@ -124,8 +134,9 @@ export default class ProdutosCrud extends React.Component{
             <table className="table mt-4">
                <thead>
                     <tr>
-                        <th>Nome</th>
-                        <th>E-mail</th>
+                        <th>Imagem do Produto</th>
+                        <th>Descriçao do Produto</th>
+                        <th>Preço</th>
                         <th>Editar</th>
                     </tr>
                 </thead>
@@ -137,18 +148,19 @@ export default class ProdutosCrud extends React.Component{
     }
     renderows(){
         /**mapeando usuários que estão no estado do objeto */
-        return this.state.list.map((user,index) => {
+        return this.state.list.map((product,index) => {
             return (                
                 <tr key={index}>
-                    <td>{user.name}</td>
-                    <td>{user.email}</td>
+                    <td><img src={product.img_produto} /></td>
+                    <td>{product.desc_produto}</td>
+                    <td>{product.price}</td>
                     <td>
                         <button className="btn btn-warning mr-2"
-                        onClick={() => this.load(user)}>
+                        onClick={() => this.load(product)}>
                             <i className="fa fa-pencil"></i>
                         </button>
                         <button className="btn btn-danger"
-                        onClick={() => this.remove(user)}>
+                        onClick={() => this.remove(product)}>
                             <i className="fa fa-trash"></i>
                         </button>
                     </td>

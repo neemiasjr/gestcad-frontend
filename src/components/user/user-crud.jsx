@@ -7,13 +7,13 @@ import axios from 'axios'
 
 const headerProps = {
     icon: 'users',
-    title: 'usuários',
+    title: 'clientes',
     subtitle: 'Cadastro de usuário'
 }
 
 const baseUrl = 'https://my-json-server.typicode.com/neemiasjr/gestcad-jsonserver/user'
 const initState= {
-    user: { name:'', email:'', },
+    user: { name:'', email:'', address:'', password:'',},
     list: []
 }
 
