@@ -151,7 +151,7 @@ export default class ProdutosCrud extends React.Component{
         return this.state.list.map((product,index) => {
             return (                
                 <tr key={index}>
-                    <td><img src={product.img_produto} /></td>
+                    <td><img src={product.img_produto} alt='' /></td>
                     <td>{product.desc_produto}</td>
                     <td>{product.price}</td>
                     <td>

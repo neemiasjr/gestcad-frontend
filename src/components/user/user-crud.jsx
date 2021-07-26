@@ -13,7 +13,7 @@ const headerProps = {
 
 const baseUrl = 'https://my-json-server.typicode.com/neemiasjr/gestcad-jsonserver/user'
 const initState= {
-    user: { name:'', email:'', address:'', password:'',},
+    user: { name:'', email:'', endereco:'', cidade:'', estado: '', telefone: ''},
     list: []
 }
 
@@ -89,6 +89,42 @@ export default class UserCrud extends React.Component{
                                 placeholder="Digite o email.."
                                 />
                         </div>
+                        <div className="form-group">
+                            <label htmlFor="name">Endereço</label>
+                            <input type="text" className="form-control" 
+                                name="endereco" 
+                                value={this.state.user.endereco}
+                                onChange={e => this.updatefield(e)}
+                                placeholder="Digite o endereço.."
+                                />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="name">Cidade</label>
+                            <input type="text" className="form-control" 
+                                name="cidade" 
+                                value={this.state.user.cidade}
+                                onChange={e => this.updatefield(e)}
+                                placeholder="Digite a cidade.."
+                                />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="name">Estado</label>
+                            <input type="text" className="form-control" 
+                                name="estado" 
+                                value={this.state.user.estado}
+                                onChange={e => this.updatefield(e)}
+                                placeholder="Digite o Estado.."
+                                />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="name">Telefone</label>
+                            <input type="text" className="form-control" 
+                                name="telefone" 
+                                value={this.state.user.telefone}
+                                onChange={e => this.updatefield(e)}
+                                placeholder="Digite o Telefone.."
+                                />
+                        </div>
                     </div>
                 </div>
 
@@ -128,6 +164,10 @@ export default class UserCrud extends React.Component{
                     <tr>
                         <th>Nome</th>
                         <th>E-mail</th>
+                        <th>Endereço</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Telefone</th>
                         <th>Editar</th>
                     </tr>
                 </thead>
@@ -144,6 +184,10 @@ export default class UserCrud extends React.Component{
                 <tr key={index}>
                     <td>{user.name}</td>
                     <td>{user.email}</td>
+                    <td>{user.endereco}</td>
+                    <td>{user.cidade}</td>
+                    <td>{user.estado}</td>
+                    <td>{user.telefone}</td>
                     <td>
                         <button className="btn btn-warning mr-2"
                         onClick={() => this.load(user)}>
