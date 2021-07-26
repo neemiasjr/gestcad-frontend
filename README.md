@@ -18,10 +18,8 @@
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-funcionalidades">Funcionalidades</a> •
- <a href="#-layout">Layout</a> • 
  <a href="#-como-executar-o-projeto">Como executar</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
- <a href="#-contribuidores">Contribuidores</a> • 
  <a href="#-autor">Autor</a> • 
  <a href="#user-content--licença">Licença</a>
 </p>
@@ -54,8 +52,34 @@
     - endereço
     - cidade
     - telefone
-    
+   
 - [x] Os usuários do sistema podem deletar usuários cadastrados
 
 
+## 🚀 Como executar o projeto
 
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+
+#### 🎲 Rodando o Backend (servidor)
+
+```bash
+
+# Clone este repositório
+$ git clone git@github.com:neemiasjr/gestcad-frontend.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd gestcad-frontend
+
+# Instale as dependências
+$ yarn install
+
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start 
+
+# O servidor inciará na porta:3000 - acesse http://localhost:3000
