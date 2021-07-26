@@ -96,7 +96,7 @@ $ yarn start
 ---
 
 <a href="https://github.com/neemiasjr/">
- <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/380327?s=460&u=61b426b901b8fe02e12019b1fdb67bf0072d4f00&v=4" width="100px;" alt=""/>
+ <img style="border-radius: 50%;" src="https://scontent.fbsb1-1.fna.fbcdn.net/v/t1.6435-9/57311679_2225396034394448_6869417521250828288_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=e3f864&_nc_ohc=FcCHVyVUA_AAX8P_v0I&_nc_ht=scontent.fbsb1-1.fna&oh=92fd8c92300fba73559d7111ee12d59c&oe=61238D69" width="100px;" alt=""/>
  <br />
  <sub><b>Neemias Júnior</b></sub></a>
  <br />
