@@ -11,7 +11,7 @@
 </p>
 
 <h4 align="center"> 
- Projeto desenvolvido para evento Gama Academy - Hiring Coders - Desafio 2# - Gestão de Cadastros
+ Projeto desenvolvido para evento Gama Academy - Hiring Coders - Desafio 2# - Gestão de Cadastros - Ecommerce - MadeinBrazil
 </h4>
 
 
@@ -30,4 +30,11 @@
 <h1 align="center">
     <img alt="Projeto" title="#Projeto" src="src/assets/imgs/madeinbrazil-logo.svg" />
 </h1>
+
+
+## 💻 Sobre o projeto
+
+♻️ Gescad Ecommerce - Projeto desenvolvido para cadastro de usuários e produtos musicais para loja de ecommerce. 
+
+
 
