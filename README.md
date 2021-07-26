@@ -28,6 +28,6 @@
 
 
 <h1 align="center">
-    <img alt="Projeto" title="#Projeto" src="../../assets/imgs/madeinbrazil-logo.svg" />
+    <img alt="Projeto" title="#Projeto" src="../assets/imgs/madeinbrazil-logo.svg" />
 </h1>
 
