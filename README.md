@@ -11,8 +11,7 @@
 </p>
 
 <h4 align="center"> 
-  # gestcad-frontend
-  Projeto desenvolvido para evento Gama Academy 
+ Projeto desenvolvido para evento Gama Academy - Hiring Coders - Desafio 2# - Gestão de Cadastros
 </h4>
 
 
