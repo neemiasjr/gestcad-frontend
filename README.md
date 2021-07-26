@@ -9,3 +9,4 @@ Projeto desenvolvido para evento Gama Academy -
 <a href="https://github.com/neemiasjr/gestcad-frontend/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/neemiasjr/gestcad-frontend">
  </a>
+<img alt="Feito por Neemias JR" src="https://img.shields.io/badge/feito%20por-NeemiasJR-%237519C1">
