@@ -37,4 +37,19 @@
 ♻️ Gescad Ecommerce - Projeto desenvolvido para cadastro de usuários e produtos musicais para loja de ecommerce. 
 
 
+## ⚙️ Funcionalidades
+
+- [x] O usuário do sistema pode cadastrar novos usuários informando:
+  - [x] nome
+  - [x] e-mail
+  - [x] endereço
+  - [x] cidade
+  - [x] estado 
+  - [x] telefone  
+   
+
+- [x] Os usuários do sistema podem alterar usuários cadastrados
+- [x] Os usuários do sistema podem deletar usuários cadastrados
+
+
 
