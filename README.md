@@ -48,7 +48,13 @@
   - [x] telefone  
    
 
-- [x] Os usuários do sistema podem alterar usuários cadastrados
+- [x] Os usuários do sistema podem alterar dados de usuários cadastrados, tais como:
+    - nome
+    - e-mail
+    - endereço
+    - cidade
+    - telefone
+    
 - [x] Os usuários do sistema podem deletar usuários cadastrados
 
 
